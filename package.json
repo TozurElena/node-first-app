@@ -1,0 +1,22 @@
+{
+  "name": "node_first_app",
+  "version": "1.0.0",
+  "description": "a very simple user management app. With no UI other than the API endpoints we'll design in a RESTfull manner and the data stored locally as a .json file with read/write functionalities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TozurElena/node-first-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TozurElena/node-first-app/issues"
+  },
+  "homepage": "https://github.com/TozurElena/node-first-app#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
