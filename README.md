@@ -16,3 +16,4 @@ A very simple user management app. With no UI other than the API endpoints we'll
 
 ### Used modules:
 - [jsonfile](https://www.npmjs.com/package/jsonfile) Easily read/write JSON files in Node.js.
+- [body-parser](https://www.npmjs.com/package/body-parser) Node.js body parsing middleware. Parse incoming request bodies in a middleware before your handlers, available under the req.body property.
