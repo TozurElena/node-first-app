@@ -51,4 +51,48 @@ module.exports = app => {
       res.sendStatus(200);
     });
   });
+
+  // Put routes are to be used for updating a or multiple record/s from datastorage. 
+  // Create an app.put route for updating an user.
+  // The username to update the user with is sent through the request body, though, we send the email of the user we want to update as a query parameter. 
+  // Looping over the contents of the json file we can find the user based on the given email, and update the username accordingly. 
+  // To then write the newly updates content inside of the local json file.
+  app.put('/user', (req, res) => {
+    let user;
+    let username = req.body.username;
+    let email = req.body.email;
+
+    jsonfile.readFile(file_path, function(err, content) {
+      for (let i = content.length - 1; i >= 0; i--) {
+        if (content[i].email === req.query.email) {
+          console.log("update user " + req.query.email + " has now username : " + username);
+
+          user = content[i];
+          user.username = username;
+        }
+      }
+      jsonfile.writeFile(file_path, content, function(err) {
+        console.log('err: ', err);
+
+      });
+    });
+    res.send(user);
+  });
+
+  // a route that returns a specific user based on their email
+  app.get('/user', (req, res) => {
+    let user;
+    let email = req.query.email;
+
+    jsonfile.readFile(file_path, function(err, content) {
+      for (let i = content.length - 1; i >= 0; i--) {
+        if (content[i].email === email) {
+          console.log("found user" + content[i]);
+          console.log(content[i]);
+          user = content[i];
+        }
+      }
+      res.send(user);
+    });
+  });
 };
