@@ -7,6 +7,7 @@
 
 ### Resources and tools used:
  ![JS](https://img.shields.io/badge/JS-JavaScript-blue?style=for-the-badge&logo=js&logoColor=white)
+ <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/>
 - [Visual Studio Code ](https://code.visualstudio.com)
 - [Postman (testing API)](https://www.postman.com)
 - Git and GitHub
